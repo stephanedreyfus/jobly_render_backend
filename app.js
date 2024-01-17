@@ -27,6 +27,9 @@ app.use("/companies", companiesRoutes);
 app.use("/users", usersRoutes);
 app.use("/jobs", jobsRoutes);
 
+app.get("/", async function (req, res, next) {
+  return res.json("There is not root.")
+});
 
 /** Handle 404 errors -- this matches everything */
 app.use(function (req, res, next) {
